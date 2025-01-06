@@ -9,7 +9,8 @@
     "name": "tp.jp",
     "email": "chronokreuz@gmail.com"
   },
-  "legacyFolders": {},
-  "legacyFiles": {},
-  "localPath": "D:\\unity\\projects\\tools\\material-builder\\Packages\\com.tp-lab.material-builder"
+  "legacyFolders": {
+    "Assets\\TpLab\\MaterialBuilder": "6942dfa3e4584f8409c75e828427f51b"
+  },
+  "legacyFiles": {}
 }
