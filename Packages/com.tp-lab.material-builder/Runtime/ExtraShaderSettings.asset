@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980c82f8263430742be7d653b950f44b, type: 3}
-  m_Name: ShaderSettings
+  m_Name: ExtraShaderSettings
   m_EditorClassIdentifier: 
   shaderSettings:
-  - shaderName: Autodesk Interactive
+  - shaderName: Silent/Filamented (Roughness setup)
     albedoPropertyName: _MainTex
     metallicPropertyName: _MetallicGlossMap
     normalPropertyName: _BumpMap
     roughnessPropertyName: _SpecGlossMap
     occlusionPropertyName: _OcclusionMap
-  - shaderName: Standard
+  - shaderName: TpLab/Filamented/AdvancedShader
     albedoPropertyName: _MainTex
     metallicPropertyName: _MetallicGlossMap
     normalPropertyName: _BumpMap

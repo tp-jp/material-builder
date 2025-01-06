@@ -9,6 +9,7 @@ namespace TpLab.MaterialBuilder.Editor
     /// </summary>
     public class MaterialBuilder : EditorWindow
     {
+        ShaderSetting[] _shaderSettings;
         string[] _supportedShaders;
         MaterialBuilderSettings _settings;
         bool _isInitialized;
@@ -30,7 +31,8 @@ namespace TpLab.MaterialBuilder.Editor
         {
             if (_isInitialized) return;
             minSize = new Vector2(470f, 145f);
-            _supportedShaders = ShaderSettings.Instance.shaderSettings.Select(x => x.shaderName).ToArray();
+            _shaderSettings = ShaderSettings.AllShaderSettings;
+            _supportedShaders = _shaderSettings.Select(x => x.shaderName).ToArray();
             _settings = AssetRepository.LoadSettings();
             _isInitialized = true;
         }
@@ -100,7 +102,7 @@ namespace TpLab.MaterialBuilder.Editor
         {
             var inputPath = AssetDatabase.GetAssetOrScenePath(_settings.inputDir);
             var outputPath = AssetDatabase.GetAssetOrScenePath(_settings.outputDir);
-            var shaderSetting = ShaderSettings.Instance.shaderSettings[_settings.shaderIndex];
+            var shaderSetting = _shaderSettings[_settings.shaderIndex];
             var shader = Shader.Find(shaderSetting.shaderName);
             var texturePacks = AssetRepository.LoadTexturePacks(inputPath);
 

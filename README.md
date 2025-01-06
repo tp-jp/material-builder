@@ -47,7 +47,6 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
      出力するMaterialのShaderを指定します。
      - Autodesk Interactive
      - Standard
-     - Silent/Filamented (Roughness setup)
    
    - NormalMapのTextureTypeを自動で設定する  
      NormalMap の TextureType が NormalMap 以外の場合、 構築時に自動で  
