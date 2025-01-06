@@ -19,7 +19,7 @@ vpm add repo https://tp-jp.github.io/vpm-repos/index.json
 
 VCCから任意のプロジェクトを選択し、「Manage Project」から「Manage Packages」を開きます。
 一覧の中から `MaterialBuilder` の右にある「＋」ボタンをクリックするか「Installed Vection」から任意のバージョンを選択することで、プロジェクトにインポートします。
-![image](https://github.com/tp-jp/light-probe-generator/assets/130125691/c22d761f-b866-45ae-87b7-0aa7761de25f)
+![image](https://github.com/user-attachments/assets/1aed6aed-c56d-43a8-8e92-4100583ba43f)
 
 リポジトリを使わずに導入したい場合は [releases](https://github.com/tp-jp/material-builder/releases) から unitypackage をダウンロードして、プロジェクトにインポートしてください。
 
