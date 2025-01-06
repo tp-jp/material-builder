@@ -1,0 +1,15 @@
+{
+  "name": "com.tp-lab.material-builder",
+  "displayName": "MaterialBuilder",
+  "version": "1.0.2",
+  "description": "Describe this Package",
+  "gitDependencies": {},
+  "vpmDependencies": {},
+  "author": {
+    "name": "tp.jp",
+    "email": "chronokreuz@gmail.com"
+  },
+  "legacyFolders": {},
+  "legacyFiles": {},
+  "localPath": "D:\\unity\\projects\\tools\\material-builder\\Packages\\com.tp-lab.material-builder"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "TpLab.MaterialBuilder",
+    "rootNamespace": "TpLab.MaterialBuilder",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
