@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TpLab.MaterialBuilder
+namespace TpLab.MaterialBuilder.Editor
 {
     public static class StringExtensions
     {

@@ -3,20 +3,22 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace TpLab.MaterialBuilder
+namespace TpLab.MaterialBuilder.Editor
 {
     public static class AssetRepository
     {
         /// <summary>
         /// 設定ファイルのパス
         /// </summary>
-        static readonly string SettingPath = $"Assets/TpLab/{nameof(MaterialBuilder)}/Settings.asset";
+        static readonly string SettingPath = "Assets/TpLab/MaterialBuilder/Settings.asset";
 
         /// <summary>
         /// MaterialBuilderの設定を読み込む。
         /// </summary>
         /// <returns>MaterialBuilderの設定</returns>
-        public static MaterialBuilderSettings LoadSettings() => AssetDatabase.LoadAssetAtPath<MaterialBuilderSettings>(SettingPath) ?? new MaterialBuilderSettings();
+        public static MaterialBuilderSettings LoadSettings() =>
+            AssetDatabase.LoadAssetAtPath<MaterialBuilderSettings>(SettingPath) ??
+            ScriptableObject.CreateInstance<MaterialBuilderSettings>();
 
         /// <summary>
         /// MaterialBuilderの設定を保存する。
@@ -24,11 +26,17 @@ namespace TpLab.MaterialBuilder
         /// <param name="settings">MaterialBuilderの設定</param>
         public static void SaveSettings(MaterialBuilderSettings settings)
         {
-            if (!AssetDatabase.Contains(settings as UnityEngine.Object))
+            var dir = Path.GetDirectoryName(SettingPath);
+            if (!string.IsNullOrEmpty(dir) && !AssetDatabase.IsValidFolder(dir))
             {
-                // 新規の場合は作成
+                Directory.CreateDirectory(dir);
+            }
+
+            if (!AssetDatabase.Contains(settings))
+            {
                 AssetDatabase.CreateAsset(settings, SettingPath);
             }
+
             EditorUtility.SetDirty(settings);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
@@ -53,7 +61,9 @@ namespace TpLab.MaterialBuilder
                     Normal = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Normal_DirectX.png")?.FullName),
                     Roughness = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Roughness.png")?.FullName),
                     Occlusion = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Mixed_AO.png")?.FullName),
-                    NormalImporter = LoadTextureImporter(textures.FirstOrDefault(f => f.Name == $"{x}_Normal_DirectX.png")?.FullName),
+                    NormalImporter =
+                        LoadTextureImporter(textures.FirstOrDefault(f => f.Name == $"{x}_Normal_DirectX.png")
+                            ?.FullName),
                 })
                 .ToArray();
         }

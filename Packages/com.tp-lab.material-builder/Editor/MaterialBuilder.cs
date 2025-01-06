@@ -1,9 +1,8 @@
 ﻿using System.Linq;
-using TpLab.MaterialBuilder.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace TpLab.MaterialBuilder
+namespace TpLab.MaterialBuilder.Editor
 {
     /// <summary>
     /// SubstancePainterで出力したテクスチャを元にマテリアルを構築する拡張エディタ。
@@ -17,10 +16,10 @@ namespace TpLab.MaterialBuilder
         /// <summary>
         /// 拡張エディタを開く。
         /// </summary>
-        [MenuItem("TpLab/" + nameof(MaterialBuilder), false)]
+        [MenuItem("TpLab/MaterialBuilder", false)]
         static void ShowWindow()
         {
-            var window = GetWindow<MaterialBuilder>(nameof(MaterialBuilder));
+            var window = GetWindow<MaterialBuilder>("MaterialBuilder");
             window.Initialize();
         }
 

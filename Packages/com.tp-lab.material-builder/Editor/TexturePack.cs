@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace TpLab.MaterialBuilder
+namespace TpLab.MaterialBuilder.Editor
 {
     /// <summary>
     /// Materialに設定するTexture一式。
