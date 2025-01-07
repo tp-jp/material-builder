@@ -25,3 +25,15 @@ MonoBehaviour:
     normalPropertyName: _BumpMap
     roughnessPropertyName: _SpecGlossMap
     occlusionPropertyName: _OcclusionMap
+  - shaderName: Silent/Filamented (Roughness setup)
+    albedoPropertyName: _MainTex
+    metallicPropertyName: _MetallicGlossMap
+    normalPropertyName: _BumpMap
+    roughnessPropertyName: _SpecGlossMap
+    occlusionPropertyName: _OcclusionMap
+  - shaderName: TpLab/Filamented/AdvancedShader
+    albedoPropertyName: _MainTex
+    metallicPropertyName: _MetallicGlossMap
+    normalPropertyName: _BumpMap
+    roughnessPropertyName: _SpecGlossMap
+    occlusionPropertyName: _OcclusionMap
