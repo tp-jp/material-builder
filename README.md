@@ -24,7 +24,7 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
 リポジトリを使わずに導入したい場合は [releases](https://github.com/tp-jp/material-builder/releases) から unitypackage をダウンロードして、プロジェクトにインポートしてください。
 
 
-## VPMを使わずにPackageManagerから導入したい場合
+## Install manually (UPM)
 
 - ツールバーから `Window>Package Manager` を選択。
 - 左上の「＋」ボタンをクリックし、 `Add package from git URL` を選択。
