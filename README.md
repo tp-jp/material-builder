@@ -26,10 +26,10 @@ VCCから任意のプロジェクトを選択し、「Manage Project」から「
 
 ## Install manually (UPM)
 
-- ツールバーから `Window>Package Manager` を選択。
-- 左上の「＋」ボタンをクリックし、 `Add package from git URL` を選択。
-- URLに https://github.com/tp-jp/material-builder.git?path=Packages/com.tp-lab.material-builder を入力して「Add」ボタンを選択。
-
+以下を UPM でインストールしてください。
+```
+https://github.com/tp-jp/material-builder.git?path=Packages/com.tp-lab.material-builder
+```
 
 ## 使い方
 
