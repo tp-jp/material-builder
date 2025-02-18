@@ -118,6 +118,11 @@ namespace TpLab.MaterialBuilder.Editor
                 material.SetTexture(shaderSetting.normalPropertyName, texturePack.Normal);
                 material.SetTexture(shaderSetting.roughnessPropertyName, texturePack.Roughness);
                 material.SetTexture(shaderSetting.occlusionPropertyName, texturePack.Occlusion);
+                
+                // Keyword設定
+                EnableKeyword(material, shaderSetting.metallicKeyword, texturePack.Metallic);
+                EnableKeyword(material, shaderSetting.normalKeyword, texturePack.Normal);
+                EnableKeyword(material, shaderSetting.roughnessKeyword, texturePack.Roughness);
 
                 // NormalMapの自動設定
                 var normalMapImporter = texturePack.NormalImporter;
@@ -127,6 +132,13 @@ namespace TpLab.MaterialBuilder.Editor
                     normalMapImporter.SaveAndReimport();
                 }
             }
+        }
+
+        void EnableKeyword(Material material, string keyword, Texture texture)
+        {
+            if (string.IsNullOrEmpty(keyword)) return;
+            if (!texture) return;
+            material.EnableKeyword(keyword);
         }
     }
 }

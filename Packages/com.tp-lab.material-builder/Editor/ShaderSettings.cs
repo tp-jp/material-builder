@@ -8,7 +8,7 @@ namespace TpLab.MaterialBuilder.Editor
     [CreateAssetMenu(menuName = "TpLab/MaterialBuilder/CreateShaderSettings", fileName = "ShaderSettings")]
     public class ShaderSettings : ScriptableObject
     {
-        static readonly string SettingFilePath = "Packages/com.tp-lab.material-builder/Runtime/ShaderSettings.asset";
+        const string SettingFileGuid = "dff6ce94db6a434438553976c3505f19";
 
         [SerializeField]
         public ShaderSetting[] shaderSettings;
@@ -24,7 +24,7 @@ namespace TpLab.MaterialBuilder.Editor
             {
                 if (_instance == null)
                 {
-                    _instance = AssetDatabase.LoadAssetAtPath<ShaderSettings>(SettingFilePath);
+                    _instance = AssetDatabase.LoadAssetAtPath<ShaderSettings>(AssetDatabase.GUIDToAssetPath(SettingFileGuid));
                 }
 
                 return _instance;
@@ -58,5 +58,14 @@ namespace TpLab.MaterialBuilder.Editor
 
         [SerializeField]
         public string occlusionPropertyName;
+        
+        [SerializeField]
+        public string metallicKeyword;
+        
+        [SerializeField]
+        public string normalKeyword;
+        
+        [SerializeField]
+        public string roughnessKeyword;
     }
 }
