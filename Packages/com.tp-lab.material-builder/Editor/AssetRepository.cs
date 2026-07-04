@@ -57,9 +57,9 @@ namespace TpLab.MaterialBuilder.Editor
                 {
                     BaseName = x,
                     Albedo = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Base_color.png")?.FullName),
-                    Metallic = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Metallic.png")?.FullName),
+                    Metallic = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Base_metalness.png")?.FullName),
                     Normal = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Normal_DirectX.png")?.FullName),
-                    Roughness = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Roughness.png")?.FullName),
+                    Roughness = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Specular_roughness.png")?.FullName),
                     Occlusion = LoadTexture(textures.FirstOrDefault(f => f.Name == $"{x}_Mixed_AO.png")?.FullName),
                     NormalImporter =
                         LoadTextureImporter(textures.FirstOrDefault(f => f.Name == $"{x}_Normal_DirectX.png")
